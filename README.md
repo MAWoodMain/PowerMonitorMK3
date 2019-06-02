@@ -1,5 +1,20 @@
 # Power Meter MK3
 
+## The Plan
+
+The plan is to evaluate the ADE9153 IC using an initial PCB build with mains isolation for easy development and no real planned form factor.
+
+Then assuming the IC checks out the schematic and PCB will be reissued without isolation and with a much tigher form factor to fit in a DIN rail enclosure so it can be wired into my home.
+
+An extra prototype run may be required inbetween to evaluate isolation removal or to fix mistakes that render ISS1 unusable.
+
+The ISS1 PCB is powered from the safe side using a micro USB cable and this power is isolated and used on the hot side, this circuit is based on the ADE9153's evaluation board schematic. 
+
+**It is noteworthy that the hot side's GND is mains live and does present a serious safety risk.**
+
+I accept no liability for anyone else's use of this design.
+
+
 ## PCB Builds
 
 ### ISS1 Build:
@@ -9,7 +24,7 @@
   - Top side stencil order with the PCB
     - Ordered default size, this was a mistake next time order a custom side much smaller
 - Parts ordered from LCSC and DigiKey kitting for 2 PCBs
-  - DHL on behalf of Digikey charged excessive customs charges inflating the build cost greatly
+  - DHL on behalf of Digikey charged excessive customs charges inflating the build cost greatly I recommend Mouser as an alternative (for the UK) and have upissued the BOM accordingly
 - Assembled at home
   - Boards were cleaned with IPA
   - Scrap PCBs were used to position the new PCB in place for stenciling
