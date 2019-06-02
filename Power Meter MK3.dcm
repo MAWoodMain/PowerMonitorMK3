@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADuM4152BRIZ
+D 5KV SPI isolator
+F https://www.analog.com/media/en/technical-documentation/data-sheets/ADuM4151_4152_4153.pdf
+$ENDCMP
+#
+#End Doc Library
