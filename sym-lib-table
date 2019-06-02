@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name ADE9153A_MK1)(type Legacy)(uri "${KIPRJMOD}/Project Libraries/ADE9153A_MK1.lib")(options "")(descr ""))
+  (lib (name ESP32-WROVER-B__16MB_)(type Legacy)(uri "${KIPRJMOD}/Project Libraries/ESP32-WROVER-B__16MB_.lib")(options "")(descr ""))
+)
