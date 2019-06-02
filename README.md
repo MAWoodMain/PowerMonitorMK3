@@ -27,7 +27,7 @@
 ![ISS1 Build](/img/ISS1-MOD-A-B.png)
 
 #### Issues associated with this build:
-#1 #2 #3
+[#1](/../../issues/1) [#2](/../../issues/2) [#3](/../../issues/3)
 #### Board mods:
 - **MOD A** 
   - Pin 5 of U2 (Isolated DC-DC) has to be isolated, the PCB connects it to GND which prevents the IC from working
