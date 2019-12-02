@@ -76,10 +76,17 @@
 #define ADE9153A_TEMP_CFG 0x000C		/*Temperature sensor configuration*/
 
 /* Ideal Calibration Values for ADE9153A Shield Based on Sensor Values */
-#define CAL_IRMS_CC		0.838190	// (uA/code)
+/*#define CAL_IRMS_CC		0.838190	// (uA/code)
 #define CAL_VRMS_CC		13.41105	// (uV/code)	
 #define CAL_POWER_CC 	1508.743	// (uW/code) Applicable for Active, reactive and apparent power
-#define CAL_ENERGY_CC	0.858307	// (uWhr/xTHR_HI code)Applicable for Active, reactive and apparent energy
+#define CAL_ENERGY_CC	0.858307	// (uWhr/xTHR_HI code)Applicable for Active, reactive and apparent energy*/
+/* Ideal Calibration Values for power monitor MK3 */
+
+#define CAL_IRMS_CC		2.79396		// (uA/code)
+#define CAL_VRMS_CC		13.26		// (uV/code)	
+#define CAL_POWER_CC 	3705.0		// (nW/code) Applicable for Active, reactive and apparent power
+#define CAL_ENERGY_CC	0021.0773	// (nWhr/xTHR_HI code)Applicable for Active, reactive and apparent energy
+
 
 /**************************************************************************
   Structures and Global Variables

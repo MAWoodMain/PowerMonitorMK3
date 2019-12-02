@@ -77,7 +77,6 @@ void setup() {
   delay(100);
   digitalWrite(PM_RST, HIGH);
   delay(1000);
-  Serial.println("Reset Done");
 
   delay(1000);
   /*SPI initialization and test*/
@@ -115,13 +114,8 @@ void readandwrite()
   ade9153A.ReadPQRegs(&pqVals);
   ade9153A.ReadTemperature(&tempVal);
   
-  Serial.print("RMS Current:\t");        
-  Serial.print(rmsVals.CurrentRMSValue/1000); 
-  Serial.println(" A");
-  
-  Serial.print("RMS Voltage:\t");        
-  Serial.print(rmsVals.VoltageRMSValue/1000);
-  Serial.println(" V");
+  Serial.printf("RMS Current:\t%.3f A\n\r", rmsVals.CurrentRMSValue);
+  Serial.printf("RMS Voltage:\t%.3f V\n\r", rmsVals.VoltageRMSValue);
   
   Serial.print("Active Power:\t");        
   Serial.print(powerVals.ActivePowerValue/1000);

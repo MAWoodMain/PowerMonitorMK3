@@ -40,14 +40,8 @@ void connect_to_aws(void)
 {
     
     net.setCACert(aws_root_ca_pem_start);
-    Serial.println("CA");
-    Serial.println(aws_root_ca_pem_start);
     net.setCertificate(certificate_pem_crt_start);
-    Serial.println("CRT");
-    Serial.println(certificate_pem_crt_start);
     net.setPrivateKey(private_pem_key_start);
-    Serial.println("PEM");
-    Serial.println(private_pem_key_start);
     client.begin(AWS_IOT_ENDPOINT, 8883, net);
 
         int retries = 0;
