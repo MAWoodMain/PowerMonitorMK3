@@ -1,2 +1,5 @@
 
 *.kicad_pcb-bak
+/Firmware/.pio
+/Firmware/cert/
+/Firmware/.vscode/
