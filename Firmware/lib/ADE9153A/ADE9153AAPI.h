@@ -82,10 +82,10 @@
 #define CAL_ENERGY_CC	0.858307	// (uWhr/xTHR_HI code)Applicable for Active, reactive and apparent energy*/
 /* Ideal Calibration Values for power monitor MK3 */
 
-#define CAL_IRMS_CC		2.79396		// (uA/code)
-#define CAL_VRMS_CC		13.26		// (uV/code)	
-#define CAL_POWER_CC 	3705.0		// (nW/code) Applicable for Active, reactive and apparent power
-#define CAL_ENERGY_CC	0021.0773	// (nWhr/xTHR_HI code)Applicable for Active, reactive and apparent energy
+#define CAL_IRMS_CC		2.79397		// (uA/code)
+#define CAL_VRMS_CC		13.2903		// (uV/code)	
+#define CAL_POWER_CC 	3983.8		// (uW/code) Applicable for Active, reactive and apparent power
+#define CAL_ENERGY_CC	2.26634		// (uWhr/xTHR_HI code)Applicable for Active, reactive and apparent energy
 
 
 /**************************************************************************

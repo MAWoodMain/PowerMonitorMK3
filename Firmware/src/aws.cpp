@@ -67,27 +67,26 @@ void connect_to_aws(void)
 
 void sendJsonToAWS()
 {
-  StaticJsonDocument<512> jsonDoc;
-  JsonObject stateObj = jsonDoc.createNestedObject("state");
-  JsonObject reportedObj = stateObj.createNestedObject("reported");
+    StaticJsonDocument<512> jsonDoc;
+    JsonObject stateObj = jsonDoc.createNestedObject("state");
+    JsonObject reportedObj = stateObj.createNestedObject("reported");
 
 
-  reportedObj["device_IP"] = WiFi.localIP().toString();
+    reportedObj["device_IP"] = WiFi.localIP().toString();
 
-  // Create a nested object "location"
-  JsonObject locationObj = reportedObj.createNestedObject("wifi");
-  locationObj["wifi_SSID"] = WiFi.SSID();
-  locationObj["wifi_strength"] = WiFi.RSSI();
+    // Create a nested object "location"
+    JsonObject locationObj = reportedObj.createNestedObject("wifi");
+    locationObj["wifi_SSID"] = WiFi.SSID();
+    locationObj["wifi_strength"] = WiFi.RSSI();
   
-  char buffer[512];
-  serializeJson(jsonDoc, buffer);
+    char buffer[512];
+    serializeJson(jsonDoc, buffer);
 
-    Serial.println("Sending:");
-    Serial.println(buffer);
-    Serial.println("to:");
+    Serial.print(buffer);
+    Serial.print(" => ");
     Serial.println(AWS_IOT_TOPIC);
-  // Publish the message to AWS
-  client.publish(AWS_IOT_TOPIC, buffer);
+    // Publish the message to AWS
+    client.publish(AWS_IOT_TOPIC, buffer);
 }
 
 void aws_shadow_update_task(void *param)

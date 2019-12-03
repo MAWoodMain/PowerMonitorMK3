@@ -256,12 +256,12 @@ void ADE9153AClass:: ReadRMSRegs(struct RMSRegs *Data)
 	
 	tempReg = int32_t (SPI_Read_32(REG_AIRMS));
 	Data->CurrentRMSReg = tempReg;
-	tempValue = (float)tempReg * CAL_IRMS_CC;	//RMS in A
+	tempValue = (float)tempReg * CAL_IRMS_CC / 1000;	//RMS in mA
 	Data->CurrentRMSValue = tempValue;
 	
 	tempReg = int32_t (SPI_Read_32(REG_AVRMS));
 	Data->VoltageRMSReg = tempReg;
-	tempValue = (float)tempReg * CAL_VRMS_CC;	//RMS in V
+	tempValue = (float)tempReg * CAL_VRMS_CC / 1000;	//RMS in mV
 	Data->VoltageRMSValue = tempValue;
 }
 

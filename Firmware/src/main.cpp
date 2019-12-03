@@ -114,8 +114,8 @@ void readandwrite()
   ade9153A.ReadPQRegs(&pqVals);
   ade9153A.ReadTemperature(&tempVal);
   
-  Serial.printf("RMS Current:\t%.3f A\n\r", rmsVals.CurrentRMSValue);
-  Serial.printf("RMS Voltage:\t%.3f V\n\r", rmsVals.VoltageRMSValue);
+  Serial.printf("RMS Current:\t%.3f A\n\r", rmsVals.CurrentRMSValue/1000);
+  Serial.printf("RMS Voltage:\t%.3f V\n\r", rmsVals.VoltageRMSValue/1000);
   
   Serial.print("Active Power:\t");        
   Serial.print(powerVals.ActivePowerValue/1000);
